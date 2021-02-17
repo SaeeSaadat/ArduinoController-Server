@@ -1,43 +1,11 @@
 {
-  "name": "parse-server-example",
-  "version": "1.4.0",
-  "description": "An example Parse API server using the parse-server module",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ParsePlatform/parse-server-example"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "express": "4.17.1",
-    "kerberos": "1.1.4",
-    "parse": "2.19.0",
-    "parse-server": "4.5.0"
-  },
+  "name": "arduinocontroller-server",
+  "description": "parse-server for ArduinoController-Server",
   "scripts": {
-    "start": "node index.js",
-    "lint": "eslint --cache ./cloud && eslint --cache index.js && eslint --cache ./spec",
-    "lint-fix": "eslint --cache --fix ./cloud && eslint --cache --fix index.js && eslint --cache  --fix./spec",
-    "test": "jasmine",
-    "coverage": "nyc jasmine",
-    "prettier": "prettier --write '{cloud,spec}/{**/*,*}.js' 'index.js'",
-    "watch": "babel-watch index.js"
+    "start": "parse-server config.json",
+    "parse": "parse-dashboard --appId lAkPCoNgkCfZmWjRLYpd2Vs0OnnQdyFrFiuKebLy --masterKey 7IEQbZMXHDusMPOgDohO7ywoHbSHjvbfyRCaZ4G1 --serverURL 'http://localhost:1337/parse'"
   },
-  "engines": {
-    "node": ">=4.3"
-  },
-  "devDependencies": {
-    "babel-eslint": "10.1.0",
-    "babel-watch": "7.4.0",
-    "bluebird": "3.7.2",
-    "eslint": "7.19.0",
-    "eslint-config-standard": "16.0.2",
-    "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "4.2.1",
-    "jasmine": "3.6.4",
-    "mongodb-runner": "4.8.1",
-    "nyc": "15.1.0",
-    "prettier": "2.2.1"
+  "dependencies": {
+    "parse-server": "^3.9.0"
   }
 }
